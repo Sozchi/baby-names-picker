@@ -1,12 +1,14 @@
+import 'stop-runaway-react-effects/hijack';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Data from "./Data/data.json";
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App Data={Data} />
   </React.StrictMode>,
   document.getElementById('root')
 );

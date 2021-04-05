@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import React from "react";
+import SearchBar from "./SearchBar";
 import './App.css';
 
-function App() {
+function App(props)
+  {
+    const Data = props.Data;
+    const listOfNames = Data.map( ( list ) =>
+      <li key={list.id} className={list.sex}>{list.name}</li>
+    );
+    
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SearchBar name={name} />
+      <ul>{listOfNames}</ul>   
     </div>
   );
 }
