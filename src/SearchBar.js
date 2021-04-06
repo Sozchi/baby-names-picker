@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 
 const SearchBar = (props) =>
 {
-    const name = props.name;
-    const filterNames = name.filter( names =>
-    {
-        return Data.name.toUpperCase()
-    })
+    // const name = props.name;
+    // const filterNames = name.filter( name =>
+    // {
+    //     return name.name.toUpperCase()
+    // })
     // const [filterVal, setFilterVal] = useState( "" )
     // const searchBarInput = (event) =>
     // {
@@ -19,7 +19,7 @@ const SearchBar = (props) =>
                 type="text"
                 placeholder='Search for names...'
                 // value={filterVal}
-                // onChange={searchBarInput}
+                // onChange={filterNames}
             />
         </form>
     )
